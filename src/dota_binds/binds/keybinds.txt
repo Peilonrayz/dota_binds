@@ -1,0 +1,114 @@
+#Mods
+|SPACE|(mp)
+|MOUSE4|(shift)'+sixense_left_shift'"-sixense_left_shift"
+
+#Yeah I don't want other binds.
+unbindall
+
+#Plane alias'
+#Cheats
+(LvL) 'dota_hero_level 24'
+#Utilities
+(AA)'toggle dota_player_units_auto_attack 0 1'
+(CH)'toggle dota_health_per_vertical_marker 250 350 450 625'
+(AE)'exec autoexec.cfg'
+(Naga)'exec naga.cfg'
+(Axe)'exec axe.cfg'
+#Control groups
+(G1) '+dota_control_group 1'
+(G2) '+dota_control_group 2'
+(G3) '+dota_control_group 3'
+(MC) 'A4;+dota_camera_follow'
+#Items and abilities
+(I0)  'dota_item_execute 0'
+(I1)  'dota_item_execute 1'
+(I2)  'dota_item_execute 2'
+(I3)  'dota_item_execute 3'
+(I4)  'dota_item_execute 4'
+(I5)  'dota_item_execute 5'
+(IQ0) 'dota_item_quick_cast 0'
+(IQ1) 'dota_item_quick_cast 1'
+(IQ2) 'dota_item_quick_cast 2'
+(IQ3) 'dota_item_quick_cast 3'
+(IQ4) 'dota_item_quick_cast 4'
+(IQ5) 'dota_item_quick_cast 5'
+(A0)  'dota_ability_execute 0'
+(A1)  'dota_ability_execute 1'
+(A2)  'dota_ability_execute 2'
+(A3)  'dota_ability_execute 3'
+(A4)  'dota_ability_execute 4'
+(A5)  'dota_ability_execute 5'
+(AA0) 'dota_ability_autocast 0'
+(AA1) 'dota_ability_autocast 1'
+(AA2) 'dota_ability_autocast 2'
+(AA3) 'dota_ability_autocast 3'
+(AA4) 'dota_ability_autocast 4'
+(AA5) 'dota_ability_autocast 5'
+(AQ0) 'dota_ability_quickcast 0'
+(AQ1) 'dota_ability_quickcast 1'
+(AQ2) 'dota_ability_quickcast 2'
+(AQ3) 'dota_ability_quickcast 3'
+(AQ4) 'dota_ability_quickcast 4'
+(AQ5) 'dota_ability_quickcast 5'
+
+#Cheats
+[](LvLUp) `KP_9`'LvL'
+
+#Utilities
+[](Stop)       `m`       'dota_stop'
+[](Upgrade)    `r`       'dota_ability_learn_mode'
+[](Stats)      `e`       'dota_learn_stats'
+[](Attack)     `MOUSE5`  'mc_attack'
+[](AutoAttack) `KP_0`   'AA'
+[](ChangeHP)   `KP_DEL` 'CH'
+[](Pause)      `F9`      'dota_pause'
+[](Message)    `ENTER`   'say'
+[](Talk)       `.`       '+voicerecord'
+[](Esc)        `ESCAPE`  'cancelselect'
+[](Console)    `\\`      'toggleconsole'
+[](Reload)     `F11`     'AE'
+[](LNaga)      `KP_1`    'Naga'
+[](LAxe)       `KP_2`    'Axe'
+[](Graph)      `KP_3`    '+showitems'
+[](Score)      `KP_5`    '+score'
+[](Secondary)  `KP_7`    '+secondary'
+
+#Shop
+[](Shop) `,`'toggleshoppanel'"toggleshoppanel"
+[](QBuy) `j`'dota_purchase_quickbuy'
+[](SBuy) `k`'dota_purchase_stickybuy'
+
+#Control Groups
+[](BM0) `y` '+dota_camera_follow'
+[](BM1) `t` 'dota_select_courier'
+[](BM2) `u` 'dota_select_all_others'
+[](BM3) `6` 'G1'
+[](BM4) `7` 'G2'
+[](BM5) `8` 'G3'
+[](BMC) `5` 'MC'
+
+#Items and abilities
+[](BA0)`a`'AQ0'
+[](BA1)`s`'AQ1'
+[](BA2)`d`'AQ2'
+[](BA3)`g`'AQ3'
+[](BA4)`h`'AQ4'
+[](BA5)`f`'AQ5'
+[](BI0)`z`'IQ0'
+[](BI1)`x`'IQ1'
+[](BI2)`c`'IQ2'
+[](BI3)`v`'IQ3'
+[](BI4)`b`'IQ4'
+[](BI5)`n`'IQ5'
+[mp](MA0)`a`'AA0'
+[mp](MA1)`s`'AA1'
+[mp](MA2)`d`'AA2'
+[mp](MA3)`g`'AA3'
+[mp](MA4)`h`'AA4'
+[mp](MA5)`f`'AA5'
+[mp](MI0)`z`'I0'
+[mp](MI1)`x`'I1'
+[mp](MI2)`c`'I2'
+[mp](MI3)`v`'I3'
+[mp](MI4)`b`'I4'
+[mp](MI5)`n`'I5'

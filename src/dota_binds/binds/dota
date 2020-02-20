@@ -1,0 +1,85 @@
+#!/bin/python2
+
+class colour():
+    #White
+    white = '\033[97m'
+    #Light Blue
+    blue = '\033[96m'
+    #Gray
+    gray = '\033[90m'
+    #Fail
+    red = '\033[91m'
+    #Green
+    green = '\033[92m'
+    #Red
+    yellow = '\033[93m'
+    #Dark Blue
+    dblue = '\033[94m'
+    #Header
+    pink = '\033[95m'
+
+    reset = '\033[0m'
+    bold = '\033[1m'
+    underline = '\033[4m'
+
+class Hero(object):
+    name=''
+    other=''
+    def __init__(self, lst):
+        try:
+            self.name = lst[0]
+        except:
+            raise ValueError, 'List `{}` does not contain a first index.'.format(lst)
+        try:
+            self.other = lst[1]
+        except:
+            pass
+
+    def n2o(self):
+        return '{}{}{} -> {}{}{}'.format(colour.green, self.name, colour.reset, colour.blue, self.other, colour.reset)
+
+    def o2n(self):
+        return '{}{}{} -> {}{}{}'.format(colour.blue, self.other, colour.reset, colour.green, self.name, colour.reset)
+
+    def __str__(self):
+        return self.n2o()
+
+def name(nam):
+    return nam.replace(' ', '').replace('\'', '').lower()
+
+def getDict():
+    dic = {}
+    with open('dotanames', 'r') as f:
+        for line in f:
+            text = line.replace('\n', '').split(',')
+            if len(text) == 1:
+                if len(text[0]) == 0:
+                    continue
+            h = Hero(text)
+            #print '\t'.join(line.split(',')).replace('\n', '')
+            for i in text:
+                dic[name(i)] = h
+    return dic
+
+def main(dic):
+    while True:
+        inp = raw_input('{}{}{}'.format(colour.yellow, 'Hero Name: ', colour.reset))
+        size = len(inp) + 12
+        print '\r\b\r' + ' '*size + '\r',
+        inp = name(inp)
+        hero = dic.get(inp, None)
+        if hero == None:
+            print '{0}Please Enter a valid hero, `{2}{1}{0}` is not valid.{3}'.format(colour.red, inp, colour.green, colour.reset)
+        else:
+            h = hero.o2n if inp == name(hero.other) else hero.n2o
+            print '{}'.format(h())
+
+dic = getDict()
+while True:
+    try:
+        main(dic)
+    except KeyboardInterrupt as e:
+        print
+        break
+    except:
+        pass
