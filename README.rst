@@ -8,7 +8,7 @@ DotA Binds
 About
 -----
 
-This is a skeleton project to have a standardized and concrete base for all projects.
+Build keybinds for DotA 2.
 
 Installation
 ------------
@@ -37,4 +37,4 @@ To run all tests run ``nox``. No venv is needed; nox makes all of them for us.
 License
 -------
 
-skeleton_py is available under the MIT license.
+DotA Binds is available under the MIT license.
